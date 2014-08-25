@@ -1,0 +1,37 @@
+<template name="pollResult">
+	<div class="poll-title">
+		<div class="question">
+			{{#if poll}}
+				{{poll.question}}
+			{{/if}}
+		</div>
+	</div>
+	<hr />
+	<div class="poll-options">
+		{{#if poll}}
+			{{#each poll.options}}
+				<div>
+					<label class="col-md-1">{{addOne this.id}}.</label>
+					<div class="col-md-offset-1">
+						{{this.label}}
+					</div>
+					<div class="progress col-md-3">
+						<div class="progress-bar" role="progressbar" aria-valuenow="{{this.score}}" aria-valuemin="0" aria-valuemax="{{totalVote}}" style="width: {{percentage this.score}}%;">
+						</div>
+					</div>
+					<div class="col-md-offset-4 score-label">
+						<span>{{this.score}} vote/s</span>
+						<span>({{percentage this.score}}%)</span>
+					</div>
+				</div>
+				<div style="clear: both;"></div>
+			{{/each}}
+		{{/if}}
+		<hr />
+		<div class="col-md-offset-2 total-vote">
+			<h1>{{totalVote}} total vote/s</h1>
+		</div>
+	</div>
+
+	{{> comment}}
+</template>

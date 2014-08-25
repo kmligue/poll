@@ -1,0 +1,181 @@
+@font-face {
+    font-family: GloriaHallelujah;
+    src: url(/fonts/GloriaHallelujah.ttf);
+}
+
+body {
+	background-color: #F64747;
+	font-family: 'GloriaHallelujah';
+}
+
+.header-title {
+	padding-top: 50px;
+}
+
+.header-title div {
+	text-align: center;
+	font-weight: bold;
+	font-size: 200px;
+}
+
+.poll-body {
+	background: white;
+	margin-top: 50px;
+}
+
+.poll-title textarea {
+	font-size: 40px;
+	padding: 20px;
+	border: 0;
+}
+
+.poll-title .question {
+	font-size: 40px;
+	padding: 20px 20px 0px 20px;
+}
+
+.poll-title .question h5 {
+	margin-top: 30px;
+}
+
+.poll-options {
+	padding: 20px;
+}
+
+.poll-options input[type="text"] {
+	border: 1px solid #eee;
+	border-radius: 0;
+	font-size: 20px;
+	height: 100%;
+}
+
+.poll-options label {
+	font-size: 30px;
+}
+
+.poll-options > div {
+	padding: 5px;
+}
+
+.poll-options > div > div {
+	font-size: 25px;
+}
+
+.poll-options .option input {
+	display: none;
+}
+
+.poll-options .option span {
+	position: absolute;
+	background: url(/img/sprite.png);
+	background-position: 0px 25px;
+	top: 10px;
+	left: 40px;
+	width: 25px;
+	height: 25px;
+	z-index: 9999;
+}
+
+.poll-options .option span.checked {
+	position: absolute;
+	background: url(/img/sprite.png);
+	background-position: 0px 51px;
+	top: 10px;
+	left: 40px;
+	width: 25px;
+	height: 25px;
+	z-index: 9999;
+}
+
+.checkbox-option label {
+	font-size: 15px;
+}
+
+.poll-title textarea:focus, 
+.poll-options input[type="text"]:focus {   
+	border-color: 0;
+	box-shadow: none;
+	outline: 0 none;
+}
+
+.created {
+	padding: 20px;
+}
+
+.created span {
+	color: #FFECDB;
+	font-size: 20px;
+}
+
+.btn-red {
+	background-color: #F64747;
+	color: white;
+	font-size: 23px;
+}
+
+.option-label {
+	font-size: 20px;
+}
+
+.total-vote {
+	color: #F64747;
+	text-decoration: underline;
+}
+
+.poll-options .progress-bar {
+	font-size: 15px;
+}
+
+.progress-bar {
+	background-color: #F64747;
+}
+
+.poll-options .progress {
+	padding: 0;
+	border-radius: 0;
+}
+
+.poll-options .score-label {
+	font-size: 15px;
+	padding: 0 0 0 10px;
+}
+
+.comments {
+	font-size: 18px;
+}
+
+.comment-user {
+	color: #F64747;
+}
+
+.comment-user-message {
+	word-wrap: break-word;
+}
+
+.comment-heading {
+	background: #F64747;
+	padding: 30px;
+	color: white;
+}
+
+.comment-box {
+	margin: 40px;
+	padding: 10px 40px 40px 40px;
+	background-color: wheat;
+}
+
+.comment-drop {
+	margin-top: 80px;
+}
+
+textarea.comment-message {
+	height: 100px;
+}
+
+.comment-name,
+.comment-message {
+	border: 1px solid #eee;
+	border-radius: 0;
+	font-size: 15px;
+	margin: 10px 0;
+}

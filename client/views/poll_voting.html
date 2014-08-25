@@ -1,0 +1,44 @@
+<template name="pollVoting">
+	<div class="poll-title">
+		<div class="question">
+			{{#if poll}}
+				{{poll.question}}
+				<h5>
+					{{#if poll.allowMultipleChoices}}
+						(pick one or more)
+					{{else}}
+						(pick one)
+					{{/if}}
+				</h5>
+			{{/if}}
+		</div>
+	</div>
+	<hr />
+	<div class="poll-options">
+		{{#if poll}}
+			{{#each poll.options}}
+				<div>
+					<div class="col-md-1 col-sm-1 col-xs-3 option">
+						{{#if poll.allowMultipleChoices}}
+							<input type="checkbox" class="option-checkbox" value="{{this.id}}">
+							<span></span>
+						{{else}}
+							<input type="radio" class="option-radio" name="option" value="{{this.id}}">
+							<span></span>
+						{{/if}}
+					</div>
+					<div class="col-md-11 col-sm-8 col-xs-6 option-label">
+						{{this.label}}
+					</div>
+				</div>
+				<div style="clear: both;"></div>
+			{{/each}}
+		{{/if}}
+		<hr />
+		<div>
+			<input type="button" class="btn btn-red create-poll vote" value="Vote">
+			<input type="button" class="btn btn-red create-poll pull-right result" value="Results">
+		</div>
+		<div style="clear: both;"></div>
+	</div>
+</template>
